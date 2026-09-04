@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMT - QRIS ANALYZER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1b87ff] min-h-screen flex items-center justify-center font-sans">
+
+    <!-- BAGIAN 1: HALAMAN LOGIN (Dua Kolom) -->
+    <div id="loginPage" class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-4 md:p-8">
+        
+        <!-- Sisi Kiri: Ilustrasi Tetap Sesuai Permintaan -->
+        <div class="hidden md:flex flex-col justify-center items-center bg-white rounded-3xl p-10 h-full min-h-[550px] shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Check Your QRIS in Easy Way</h2>
+            <div class="relative w-full flex justify-center items-center my-auto">
+                <svg class="w-full max-w-md h-auto" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="50" width="400" height="250" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+                    <circle cx="120" cy="120" r="30" fill="#1b87ff" opacity="0.1"/>
+                    <path d="M100 180H350" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M100 220H250" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <p class="text-gray-500 text-sm text-center mt-4">Sistem verifikasi transaksi digital yang cepat, aman, dan terpercaya.</p>
+        </div>
+
+        <!-- Sisi Kanan: Form Login (User ID & Password) -->
+        <div class="flex justify-center items-center w-full">
+            <div class="bg-white w-full max-w-md rounded-3xl p-8 shadow-2xl">
+                
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="bg-blue-600 text-white font-black px-3 py-2 rounded-xl text-xl tracking-wider">TMT</div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 leading-tight">AUDIT TMT</h1>
+                        <p class="text-xs text-gray-400">Silakan Login ke Sistem</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">User ID</label>
+                        <input type="text" id="userId" placeholder="Masukkan User ID" 
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Password</label>
+                        <input type="password" id="password" placeholder="Masukkan Password" 
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                    </div>
+                    <button onclick="prosesLogin()" 
+                        class="w-full bg-[#3b82f6] hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition duration-200 shadow-md">
+                        Login
+                    </button>
+                    <!-- Pesan Error Login -->
+                    <div id="loginError" class="hidden text-center text-xs text-red-500 mt-2 font-medium"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BAGIAN 2: TAMPILAN DASHBOARD UTAMA (Tema Gelap Ala Referensi Foto 2 - QRIS TMT) -->
+    <div id="dashboardPage" class="hidden w-full min-h-screen bg-[#0f172a] text-gray-200 flex">
+        
+        <!-- Sidebar Kiri -->
+        <aside class="w-64 bg-[#1e293b] p-6 flex flex-col border-r border-slate-800">
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="bg-blue-600 text-white font-black px-2.5 py-1.5 rounded-lg text-lg">TMT</div>
+                <span class="font-bold text-lg tracking-wider text-white">QRIS TMT</span>
+            </div>
+            <nav class="space-y-2 flex-1 text-sm font-medium">
+                <a href="#" class="flex items-center space-x-3 text-blue-400 bg-slate-800/60 px-4 py-3 rounded-xl"><span>📊 Dashboard</span></a>
+                <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white px-4 py-3 rounded-xl"><span>🔄 Transaction</span></a>
+                <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white px-4 py-3 rounded-xl"><span>📁 Log</span></a>
+                <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white px-4 py-3 rounded-xl"><span>🛰️ Satellite</span></a>
+            </nav>
+            <button onclick="logout()" class="mt-auto text-left text-xs text-red-400 hover:text-red-300 py-2 px-4 rounded-lg bg-red-500/10">🚪 Logout</button>
+        </aside>
+
+        <!-- Area Konten Utama (Dibuat Kosong Sesuai Permintaan) -->
+        <main class="flex-1 p-8 flex flex-col">
+            <header class="flex justify-between items-center mb-8 pb-4 border-b border-slate-800">
+                <h2 class="text-xl font-semibold text-white">Dashboard Overview</h2>
+                <div class="bg-slate-800 px-3 py-1.5 rounded-full text-xs text-blue-400 font-bold border border-slate-700">TMT ADMIN</div>
+            </header>
+            
+            <!-- Kotak Konten Kosong / Placeholder -->
+            <div class="flex-1 border-2 border-dashed border-slate-800 rounded-2xl flex flex-col items-center justify-center p-12 text-center text-slate-500">
+                <p class="text-base font-medium text-slate-400">Area Konten Utama (Masih Kosong)</p>
+                <p class="text-xs mt-1">Sesuai permintaan, bagian ini dikosongkan dulu untuk melihat layout awal.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script Logika Perpindahan Halaman & Tarik Saldo Flazz -->
+    <script>
+        // Cek otomatis status login saat halaman pertama kali dibuka atau di-refresh
+        window.onload = function() {
+            if (localStorage.getItem('statusLogin') === 'true') {
+                document.getElementById('loginPage').classList.add('hidden');
+                document.getElementById('dashboardPage').classList.remove('hidden');
+                // Otomatis tarik saldo terbaru setiap kali halaman direfresh
+                ambilSaldoFlazz();
+            }
+        };
+
+        async function prosesLogin() {
+            const user = document.getElementById('userId').value.trim();
+            const pass = document.getElementById('password').value.trim();
+            const errorBox = document.getElementById('loginError');
+
+            if (user === "audittrxtmt" && pass === "admaudit123") {
+                // Simpan status login ke localStorage biar gak hilang pas direfresh
+                localStorage.setItem('statusLogin', 'true');
+
+                document.getElementById('loginPage').classList.add('hidden');
+                document.getElementById('dashboardPage').classList.remove('hidden');
+                await ambilSaldoFlazz();
+            } else {
+                errorBox.innerText = "User ID atau Password salah, Bre!";
+                errorBox.classList.remove('hidden');
+            }
+        }
+
+        async function ambilSaldoFlazz() {
+            const mainContent = document.querySelector('main');
+            let cardContainer = document.getElementById('cardSaldoContainer');
+            if (!cardContainer) {
+                cardContainer = document.createElement('div');
+                cardContainer.id = 'cardSaldoContainer';
+                cardContainer.className = "grid grid-cols-1 md:grid-cols-3 gap-6 mb-8";
+                cardContainer.innerHTML = `
+                    <div class="bg-[#1e293b] p-6 rounded-2xl border border-slate-800 shadow-lg">
+                        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Available Withdraw Flazz</h3>
+                        <p id="nilaiSaldo" class="text-2xl font-bold text-sky-400">Memuat saldo terbaru...</p>
+                    </div>
+                `;
+                mainContent.insertBefore(cardContainer, mainContent.querySelector('div.flex-1'));
+            } else {
+                document.getElementById('nilaiSaldo').innerText = "Memuat saldo terbaru...";
+            }
+
+            try {
+                const response = await fetch('/api/fetch-panel', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: "auditkenzo168@gmail.com",
+                        password: "AuditAcct123@",
+                        targetUrl: "https://apps.flazzqris.com/dashboard"
+                    })
+                });
+
+                const result = await response.json();
+                if (result.status === "SUKSES") {
+                    document.getElementById('nilaiSaldo').innerText = result.data.availableWithdraw;
+                } else {
+                    document.getElementById('nilaiSaldo').innerText = "Gagal Ambil Data";
+                }
+            } catch (err) {
+                console.error("Koneksi error:", err);
+                document.getElementById('nilaiSaldo').innerText = "Server Offline";
+            }
+        }
+
+        function logout() {
+            // Hapus status login dari localStorage saat logout
+            localStorage.removeItem('statusLogin');
+
+            document.getElementById('dashboardPage').classList.add('hidden');
+            document.getElementById('loginPage').classList.remove('hidden');
+            document.getElementById('userId').value = "";
+            document.getElementById('password').value = "";
+            document.getElementById('loginError').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

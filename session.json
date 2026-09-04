@@ -1,0 +1,30 @@
+[
+  {
+    "name": "XSRF-TOKEN",
+    "value": "eyJpdiI6IjVBdWpaS1Ewb0xjMVM3TFoyY3ZKSlE9PSIsInZhbHVlIjoiU3lwanJ1MFFOM0k3L29BQlM0bVR4R05OSFo4MFpMdFMyd3U4ZTdLc1pibjVKMnNZNHFWeElpZkY2a1N1Sm5BV1lHN1ZqMmp4YTZBbmkySmVNcTZpR3pOTGMwUktOL2xTOWV5TytrMzZDRkM0VElxa1IwNS93L2VXa1hNai9uelQiLCJtYWMiOiI3MmM4MjU5MTY4YzIxYjdjODU5YzdmZGVhZjVlMTNmOWQ3MGQ0YTIzMTk2OGUxNTdkNjQzYjc5NDczNDc2ZTZmIiwidGFnIjoiIn0%3D",
+    "domain": "apps.flazzqris.com",
+    "path": "/",
+    "expires": 1788560368.808139,
+    "size": 352,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "sameSite": "Lax",
+    "priority": "Medium",
+    "sourceScheme": "Secure"
+  },
+  {
+    "name": "qris_session",
+    "value": "eyJpdiI6InVEWDVxNTdYaktWMnkwbm5ReTVvNnc9PSIsInZhbHVlIjoiVWd1aWtVK2hrTFMwNGw0c0kzdjVTenR1MXB0RUpvMTViUVJ2TFFGbVgwSjlZMGlvU084bFJNWEZmYVkwUHhqUlVPNHZlZXFESmxCYjJBM0FDZGwwcDh2ODhzQjgwbXRhQkJIVit2NXFieGQvVUR2TEVnYzV0VEdqSWRBRXNZejEiLCJtYWMiOiJjMzM4ZThjNTA4ZDAyNmIyZTdjOGY2ZTg0NGMxZTY5ZjZmNzMxZjE0ZTA3NmUyMzAyNWE4NGE4MTYwMjM2ZGMxIiwidGFnIjoiIn0%3D",
+    "domain": "apps.flazzqris.com",
+    "path": "/",
+    "expires": 1788560368.808218,
+    "size": 354,
+    "httpOnly": true,
+    "secure": false,
+    "session": false,
+    "sameSite": "Lax",
+    "priority": "Medium",
+    "sourceScheme": "Secure"
+  }
+]
